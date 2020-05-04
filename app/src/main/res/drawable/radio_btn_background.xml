@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorBlueDark" />
+    <corners android:radius="12dp" />
+    <stroke
+        android:width="@dimen/padding_4"
+        android:color="@color/colorBorderRadioBtn" />
+    <padding
+        android:bottom="@dimen/padding_mid"
+        android:left="@dimen/padding_mid"
+        android:right="@dimen/padding_mid"
+        android:top="@dimen/padding_mid" />
+</shape>

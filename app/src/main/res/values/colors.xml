@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#0A0D1B</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBlueDark">#252c4a</color>
+    <color name="colorRedResult">#fe0046</color>
+    <color name="colorMoovTests">#7e40fd</color>
+    <color name="colorBlueLight">#3ed2ff</color>
+    <color name="colorYellow">#FFB229</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#cc000000</color>
+    <color name="colorBorderRadioBtn">#21496B</color>
+    <color name="colorBlue">#2196F3</color>
+    <color name="questionnumber">#8A93BB</color>
+    <color name="colorGreen">#1ABB9B</color>
+    <color name="colorGrayDark">#727272</color>
+    <color name="colorGraylight">#DFDFDF</color>
+</resources>

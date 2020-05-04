@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mentalViewModel"
+            type="com.elfarsisy.lovetypetest.ui.fragments.mental_test.MentalTestViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_without_shape"
+        android:layoutDirection="ltr">
+
+
+        <TextView
+            android:id="@+id/time_counter_txt_view"
+            style="@style/counter_mental_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_mid"
+            android:layout_marginTop="16dp"
+            android:text="@{mentalViewModel.currentTimeString.toString()}"
+            app:layout_constraintEnd_toStartOf="@+id/question_counter_text_view"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="04:15" />
+
+        <TextView
+            android:id="@+id/question_counter_text_view"
+            style="@style/counter_mental_style"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/margin_mid"
+            android:text="@{@string/mentalQuestionNumber(mentalViewModel.questionNumber)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/time_counter_txt_view"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/mentalQuestionNumber" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_counter_txt_view">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time_counter_txt_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/back_question_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBlueDark"
+            android:drawableStart="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:onClick="@{()->mentalViewModel.navigateToBackQuestion()}"
+            android:text="back"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/next_question_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBlueDark"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:onClick="@{()->mentalViewModel.navigateToNextQuestion()}"
+            android:text="Next"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="startViewModel"
+            type="com.elfarsisy.lovetypetest.ui.fragments.home.HomeViewModel" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#FFEEF5F9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/ic_background">
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowCount="2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/quick_start_card"
+            android:layout_width="@dimen/start_card_dimens"
+            android:layout_height="@dimen/start_card_dimens"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@color/colorWhite"
+            android:onClick="@{()-> startViewModel.onNavigatToQuickTest()}"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/mental_test_card"
+            app:layout_constraintEnd_toStartOf="@+id/results_card"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_mid"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/new_txt"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorBlack" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="@dimen/padding_big"
+                    android:layout_height="@dimen/padding_2"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:background="@color/colorYellow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/quick_start_txt"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_larg"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/quick_start_icon"
+                    android:src="@drawable/ic_quick_start" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/results_card"
+            android:layout_width="@dimen/start_card_dimens"
+            android:layout_height="@dimen/start_card_dimens"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorWhite"
+            android:onClick="@{()->startViewModel.onNavigatToResult()}"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/more_test_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/quick_start_card"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <LinearLayout
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_mid"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/details"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorBlack" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="@dimen/padding_big"
+                    android:layout_height="@dimen/padding_2"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:background="@color/colorRedResult" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/results_txt"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_larg"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/results_icon"
+                    android:src="@drawable/ic_results" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mental_test_card"
+            android:layout_width="@dimen/start_card_dimens"
+            android:layout_height="@dimen/start_card_dimens"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorWhite"
+            android:onClick="@{()->startViewModel.onNavigatToMentalTest()}"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/more_test_card"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quick_start_card"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_mid"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/know_your_mind"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorBlack" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="@dimen/padding_big"
+                    android:layout_height="@dimen/padding_2"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:background="@color/colorBlueLight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/mental_test_txt"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_larg"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/mental_test_icon"
+                    android:src="@drawable/ic_brain" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/more_test_card"
+            android:layout_width="@dimen/start_card_dimens"
+            android:layout_height="@dimen/start_card_dimens"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorWhite"
+            android:onClick="@{()->startViewModel.onNavigatToMoreTests()}"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/mental_test_card"
+            app:layout_constraintTop_toBottomOf="@+id/results_card"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_mid"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/other_apps"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorBlack" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="@dimen/padding_big"
+                    android:layout_height="@dimen/padding_2"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:background="@color/colorMoovTests" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_mid"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/more_tests_txt"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_larg"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/more_tests_icon"
+                    android:src="@drawable/ic_more_test" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+    </LinearLayout>
+    </LinearLayout>
+</layout>

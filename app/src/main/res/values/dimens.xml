@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_mid">16dp</dimen>
+    <dimen name="margin_big">32dp</dimen>
+    <dimen name="margin_larg">64dp</dimen>
+
+    <dimen name="padding_1">1dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_mid">16dp</dimen>
+    <dimen name="padding_big">32dp</dimen>
+    <dimen name="padding_larg">64dp</dimen>
+
+
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="text_size_mid">22sp</dimen>
+    <dimen name="title_size">24sp</dimen>
+    <dimen name="big_title_size">32sp</dimen>
+    <dimen name="start_card_dimens">160dp</dimen>
+</resources>

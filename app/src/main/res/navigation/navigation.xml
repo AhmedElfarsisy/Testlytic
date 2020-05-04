@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_quickStartFragment"
+            app:destination="@id/quickStartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mentalTestStartFragment"
+            app:destination="@id/mentalTestStartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moreTestFragment"
+            app:destination="@id/moreTestFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_inPurchaseFragment"
+            app:destination="@id/inPurchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quickStartFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.emotional_quick_test.QuickStartFragment"
+        android:label="QuickStartFragment">
+        <action
+            android:id="@+id/action_quickStartFragment_to_quickTestResultsFragment"
+            app:destination="@id/quickTestResultsFragment"
+            app:popUpTo="@id/homeFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/quickTestResultsFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.emotional_quick_test_results.QuickTestResultsFragment"
+        android:label="QuickTestResultsFragment">
+        <action
+            android:id="@+id/action_quickTestResultsFragment_to_quickTestDetailsFragment"
+            app:destination="@id/quickTestDetailsFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="quickTestDegree"
+            app:argType="integer" />
+        <action
+            android:id="@+id/quickResultPopUpToHome"
+            app:destination="@id/quickStartFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mentalTestStartFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.mental_start.MentalTestStartFragment"
+        android:label="MentalTestStartFragment">
+        <action
+            android:id="@+id/action_mentalTestStartFragment_to_mentalInstractionFragment"
+            app:destination="@id/mentalInstractionFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <action
+            android:id="@+id/pop_up_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentalInstractionFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.mental_start_instraction.MentalInstractionFragment"
+        android:label="MentalInstractionFragment">
+        <action
+            android:id="@+id/action_mentalInstractionFragment_to_mentalTestFragment"
+            app:destination="@id/mentalTestFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentalTestFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.mental_test.MentalTestFragment"
+        android:label="MentalTestFragment">
+        <action
+            android:id="@+id/action_mentalTestFragment_to_preperingMentalResultsFragment"
+            app:destination="@id/preperingMentalResultsFragment"
+            app:popUpTo="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/preperingMentalResultsFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.mental_test_prepering.PreperingMentalResultsFragment"
+        android:label="PreperingMentalResultsFragment">
+        <action
+            android:id="@+id/action_preperingMentalResultsFragment_to_mentalResultFragment"
+            app:destination="@id/mentalResultFragment"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="answersList"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/quickTestDetailsFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.emotional_quick_text_result_details.QuickTestDetailsFragment"
+        android:label="QuickTestDetailsFragment">
+        <action
+            android:id="@+id/details_pop_up_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"/>
+        <argument
+            android:name="character"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentalResultFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.mental_test_result.MentalResultFragment"
+        android:label="MentalResultFragment">
+
+        <argument
+            android:name="quickeTestResult"
+            app:argType="float" />
+        <action
+            android:id="@+id/mentalResultPopUpToHome"
+            app:destination="@id/mentalResultFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/moreTestFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.more_test.MoreTestFragment"
+        android:label="fragment_more_test"
+        tools:layout="@layout/fragment_more_test">
+
+    </fragment>
+    <fragment
+        android:id="@+id/inPurchaseFragment"
+        android:name="com.elfarsisy.lovetypetest.ui.fragments.purchase.InPurchaseFragment"
+        android:label="InPurchaseFragment">
+        <action
+            android:id="@+id/action_inPurchaseFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_inPurchaseFragment_to_quickTestResultsFragment"
+            app:destination="@id/quickTestResultsFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+</navigation>

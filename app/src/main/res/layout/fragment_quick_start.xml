@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="quickStartViewModel"
+            type="com.elfarsisy.lovetypetest.ui.fragments.emotional_quick_test.QuickStartViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background_quick_test"
+        tools:context=".ui.fragments.emotional_quick_test.QuickStartFragment">
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toTopOf="@+id/question_number_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/next_quick_question"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <TextView
+            android:id="@+id/question_number_textView"
+            style="@style/quick_start_txt_view_style"
+            android:text="@{@string/questionNumber(quickStartViewModel.liveIndex)}"
+            android:textColor="@color/questionnumber"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintBottom_toTopOf="@+id/question_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adView"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:text="Question 1/30" />
+
+        <TextView
+            android:id="@+id/question_txt"
+            style="@style/quick_start_txt_view_style"
+            android:text="@{quickStartViewModel.currentQuestion.toString()}"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_number_textView"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:text="this is the question?" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_mid"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_mid"
+            app:layout_constraintBottom_toTopOf="@+id/next_quick_question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_txt"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                style="@style/radio_btn_style"
+                android:onClick="@{()-> quickStartViewModel.getDisAgree()}"
+                android:text="@string/strongly_disagree_radio_btn" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                style="@style/radio_btn_style"
+                android:onClick="@{()-> quickStartViewModel.getDisAgree()}"
+                android:text="@string/disagree_radio_btn" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                style="@style/radio_btn_style"
+                android:onClick="@{()-> quickStartViewModel.getAgree()}"
+                android:text="@string/agree_radio_btn" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                style="@style/radio_btn_style"
+                android:checked="false"
+                android:enabled="true"
+                android:onClick="@{()-> quickStartViewModel.getAgree()}"
+                android:text="@string/strongly_agree_radio_btn" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/next_quick_question"
+            style="@style/next_quick_question_style"
+            android:onClick="@{()->quickStartViewModel.nextQuestion()}"
+            android:text="@string/next_btn"
+            app:layout_constraintBottom_toTopOf="@+id/adView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

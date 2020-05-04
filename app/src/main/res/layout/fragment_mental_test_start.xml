@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="startMentalTest"
+            type="com.elfarsisy.lovetypetest.ui.fragments.mental_start.MentalTestStartFragment" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        tools:context=".ui.fragments.mental_start.MentalTestStartFragment">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="460dp"
+            android:background="@drawable/ic_in_app_purchase_overlay"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/close_brain_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_mid"
+                android:layout_marginTop="@dimen/margin_mid"
+                android:background="@drawable/ic_close_black_24dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_larg"
+                android:layout_marginEnd="@dimen/margin_larg"
+                android:text="WHAT IS YOUR BRAIN TYPE? "
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/big_title_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_larg"
+                android:layout_marginEnd="@dimen/margin_larg"
+                android:text="@string/just_take_a_test_and_click"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_larg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_star_black_24dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                     />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_star_black_24dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                 />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_star_black_24dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/start_instraction_fragment"
+                    style="@style/next_quick_question_style"
+                    android:text="Start!" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="just for $.099" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+
+
+
+
+
+
+

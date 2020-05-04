@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="testResult"
+            type="com.elfarsisy.lovetypetest.ui.fragments.mental_test_result.MentalResulatViewModel" />
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_without_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.mental_test_result.MentalResultFragment">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_mid"
+            android:layout_marginTop="@dimen/margin_mid"
+            android:layout_marginEnd="@dimen/margin_mid"
+            android:layout_marginBottom="@dimen/margin_mid"
+            app:cardCornerRadius="24dp">
+
+            <ImageView
+                getResult="@{testResult.resultImage}"
+                android:layout_width="wrap_content"
+                android:layout_height="480dp"
+                tools:src="@drawable/iq_seventy" />
+        </androidx.cardview.widget.CardView>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_small">
+
+            <Button
+                android:id="@+id/detailed_results_btn"
+                style="@style/next_quick_question_style"
+                android:layout_width="224dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@drawable/ic_detailed_results"
+                android:text="@string/see_your_relationship_type"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="@dimen/title_size" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/to_home_agine"
+                style="@style/next_quick_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_btn"
+                android:onClick="@{()->testResult.onNavigatToHome()}"
+                android:textAllCaps="false" />
+        </FrameLayout>
+    </LinearLayout></ScrollView>
+</layout>

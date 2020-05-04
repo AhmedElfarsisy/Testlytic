@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_without_shape"
+    tools:context=".ui.fragments.more_test.MoreTestFragment">
+
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorBlueDark"
+        android:textSize="@dimen/big_title_size"
+        android:text="No More Tests Rigth Now" />
+
+</FrameLayout>

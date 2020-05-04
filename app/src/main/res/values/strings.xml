@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">LoveTypeTest</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quick_start_icon">quick start icon</string>
+    <string name="results_icon">results icon</string>
+    <string name="mental_test_icon">mental test icon</string>
+    <string name="more_tests_icon">more tests icon</string>
+    <string name="quick_start_txt">Quick start</string>
+    <string name="mental_test_txt">Mental Test</string>
+    <string name="more_tests_txt">More Tests</string>
+    <string name="new_txt">NEW</string>
+    <string name="details">DETAILS</string>
+    <string name="know_your_mind">KNOW YOUR MIND</string>
+    <string name="other_apps">OTHER APPS</string>
+    <string name="home_btn">Home</string>
+    <string name="detailed_results_btn">Detailed Results</string>
+    <string name="see_your_relationship_type">See Your Relationship Type!</string>
+    <string name="just_take_a_test_and_click">JUST TAKE A TEST AND CLICK FOR DETAILED RESULTS</string>
+    <string name="strongly_disagree_radio_btn">Strongly Disagree</string>
+    <string name="disagree_radio_btn">Disagree</string>
+    <string name="agree_radio_btn">Agree</string>
+    <string name="strongly_agree_radio_btn">Strongly Agree</string>
+    <string name="next_btn">Next</string>
+    <string name="questionNumber">Question %1$d/30</string>
+    <string name="current_txt">Current</string>
+    <string name="results_txt">Results</string>
+    <string name="mentalQuestionNumber">%1$d/30</string>
+</resources>
