@@ -4,6 +4,7 @@ Take your emotional test in quick test to know your love type and take the IQ te
 ### MVVM design pattern - databinding - ViewPager - Google Ads 
 ### Navigation - SafeArgs -ViewModel - factory ViewModel and others
 
+<p align="center">
 <img src="New folder/splash.png" width="350" title=" splash"/>
 <img src= "New folder/home.png" width="350" title="home" />
 <img src="New folder/emotionalTest.png" width="350" title=" quickTest"/>
@@ -14,5 +15,5 @@ Take your emotional test in quick test to know your love type and take the IQ te
 <img src="New folder/mentalTest.png" width="350" title=" mentalTest"/>
 <img src="New folder/payScreen.png" width="350" title=" Results"/>
 <img src= "New folder/moreTests.png" width="350" title="moreTests" />
-
+</p>
 You can download the APK from my google drive until be available in play store [link to Google drive!](https://drive.google.com/open?id=1czJOo-CqvUiTk57368dm4dRzpvNx0lhn)
